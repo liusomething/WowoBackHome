@@ -1,0 +1,68 @@
+{\rtf1\ansi\ansicpg936\cocoartf1265\cocoasubrtf210
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset134 STHeitiSC-Light;\f2\fswiss\fcharset0 Helvetica;
+}
+{\colortbl;\red255\green255\blue255;\red38\green38\blue38;\red242\green242\blue242;\red186\green18\blue10;
+}
+\paperw11900\paperh16840\margl1440\margr1440\vieww24420\viewh18140\viewkind0
+\deftab720
+\pard\pardeftab720\sl360
+
+\f0\fs36 \cf2 \cb3 \kerning1\expnd4\expndtw20
+\
+QuickLua 
+\f1 \'b4\'b4\'bd\'a8\'b9\'a4\'b3\'cc\'b4\'fa\'c2\'eb\'a3\'ba
+\f0 \
+./create_project.sh -p a.a.a. Test 
+\f1 \
+
+\fs28 \
+\
+\
+\
+cc.ui... quick\'b7\'e2\'d7\'b0\'a3\'ac\'bc\'cc\'b3\'d0\'d7\'d4node\
+ccui... C++\'b7\'e2\'d7\'b0\'a3\'ac\'bc\'cc\'b3\'d0\'d7\'d4Widget\
+\
+C++ \'d6\'d0\'d6\'bb\'d3\'d0layer\'b2\'c5\'c4\'dc\'b4\'a5\'c3\'fe\
+\'b6\'f8quick\'d6\'d0\'b5\'c4node\'d2\'b2\'c4\'dc\'d7\'a2\'b2\'e1\'b4\'a5\'c3\'fe\'c1\'cb\'a3\'ac\'ca\'b9\'d3\'c3sp:addNodeEventListener(cc.NODE_TOUCH_EVENT,function(event))\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\sl288\slmult1
+
+\fs36 \cf0 \cb1 \expnd0\expndtw0\kerning0
+\'b5\'da\'b6\'fe\'d6\'d6\'a3\'ba\'ca\'b9\'d3\'c3
+\f2 C++
+\f1 \'c0\'ef\'c3\'e6\'b5\'c4
+\f2 EventDispatcher
+\f1 \'bd\'f8\'d0\'d0\'d7\'a2\'b2\'e1
+\f2 \
+
+\f1 \'c8\'e7\'cf\'c2\'b4\'fa\'c2\'eb\'cb\'f9\'ca\'be\'a3\'ba
+\f2 \cf4 \expnd0\expndtw0\kerning0
+ local function touchbegan(location,event)\
+         print("
+\f1 \'d5\'e2\'ca\'c7\'d2\'bb\'d6\'d6\'cd\'a8\'d3\'c3\'b5\'c4\'b4\'a5\'c3\'fe
+\f2 ")\
+        local p=location:getLocation()\
+        print(p.x ..p.y)\
+        return true\
+   end\
+   local listener=cc.EventListenerTouchOneByOne:create()\
+   local dispatcher=cc.Director:getInstance():getEventDispatcher() listener:registerScriptHandler(touchbegan,cc.Handler.EVENT_TOUCH_BEGAN)\cf0 \expnd0\expndtw0\kerning0
+\
+\cf4 \expnd0\expndtw0\kerning0
+dispatcher:addEventListenerWithSceneGraphPriority(listener, self)
+\f1\fs28 \cf2 \cb3 \kerning1\expnd4\expndtw20
+\
+\pard\pardeftab720\sl360
+\cf2 \
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+}
